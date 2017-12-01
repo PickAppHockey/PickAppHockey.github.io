@@ -23,7 +23,7 @@ class NavMenu extends React.Component{
             <MenuDivider />,
             <MenuItem onClick={this.props.goToEditProfile} caption={"Edit Profile"} />,
             <MenuDivider />,
-            <MenuItem onClick={this.props.goToPlayTimes} caption={"Playtimes"} />,
+            <MenuItem onClick={()=>this.props.goToPlayTimes(this.props.player.id)} caption={"Playtimes"} />,
             <MenuDivider />,
 
         ]
