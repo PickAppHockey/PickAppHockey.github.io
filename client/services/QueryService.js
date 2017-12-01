@@ -1,5 +1,5 @@
 const fetch = require('isomorphic-fetch')
-const Base_PATH = process.env.NODE_ENV === 'development' ? "http://localhost:3000/Queries" : "https://pickapp-server.herokuapp.com/Queries";
+const Base_PATH = process.env.NODE_ENV === 'development' ? "http://localhost:8080/Queries" : "https://pickapp-server.herokuapp.com/Queries";
 
 function QueryService(){
     
