@@ -46,7 +46,6 @@ class PlayTime extends React.Component{
     }
 
     handleDateChange = (item,value) => {
-        debugger;   
         let playTime = Object.assign({}, this.state.playTime);
         playTime[key] = value;
         this.setState(playTime);

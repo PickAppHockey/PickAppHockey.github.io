@@ -28,7 +28,6 @@ const store = configure()
 const history = syncHistoryWithStore(browserHistory, store)
 // let rinks = RinkServices.GetAllRinks()
 //             .then(rinks =>{
-//               debugger;
 //             })
 
 

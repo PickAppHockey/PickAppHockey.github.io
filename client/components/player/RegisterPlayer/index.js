@@ -4,6 +4,10 @@ import Input from 'react-toolbox/lib/input';
 import services from '../../../services/player'
 import * as PlayerActions from '../../../actions/player'
 import * as RouterActions from '../../../actions/router'
+import {startCase} from 'lodash'
+import Button from 'ui/Button'
+import style from '../style.css'
+
 
 
 //const PlayerDto = require('shared/Contracts/DTOs/PlayerDto');
@@ -53,15 +57,17 @@ class RegisterPlayer extends Component {
   render() {
     return (
       <div>
+        <div className={style.inputContainer}>
         <h1>Registration</h1>
-        <div>
+
         {
           [this.attrs.map((key)=>{
             const inputType = (key === 'hash')? "password" : "text";
-            return <Input type={inputType} name={key} value={this.state.player[key]} onChange={this.handle[key]} label={key}/>
+            const label = (key === 'hash')? "Password" : startCase(key);
+            return <Input type={inputType} name={key} value={this.state.player[key]} onChange={this.handle[key]} label={label}/>
           })]
         }
-        <button onClick={this.registerPlayer}> save </button>
+        <Button onClick={this.registerPlayer}> Save </Button>
       </div>
     </div>
     )

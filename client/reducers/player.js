@@ -4,25 +4,36 @@
 
 
 
-const initialState = null;
+const initialState = JSON.parse(localStorage.getItem("player") || null);
 
 
 export default (state = initialState, action)=>{
   switch(action.type){
     case "Add Player":
+      saveToLocalStorage(action.payload)
       return action.payload;
 
     case "Login":
-      return action.payload;
+    saveToLocalStorage(action.payload)
+    return action.payload;
 
     case "Logout":
+      localStorage.removeItem("player")
       return action.payload;
 
     case "Edit Player":
-      return action.playload;
+      saveToLocalStorage(action.payload)
+      return action.payload;
 
     default: return state;
   }
+}
+
+function saveToLocalStorage(player){
+  const jsonPlayer = JSON.stringify(player);
+  localStorage.setItem("player", jsonPlayer);
+  
+
 }
 
 

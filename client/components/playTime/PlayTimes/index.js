@@ -111,6 +111,8 @@ class PlayTimes extends React.Component{
       
         return(
             <div>
+                <h3> My Playtimes </h3>
+                {this.state.playTimes.length === 0 && <p> You have no playtimes scheduled. Playtimes can be added by going to a rink page </p>}
                 <Row>
                     <Col xs={6}>
                         <List>

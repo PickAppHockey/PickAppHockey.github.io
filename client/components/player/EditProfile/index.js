@@ -4,6 +4,9 @@ import Input from 'react-toolbox/lib/input';
 import services from '../../../services/player'
 import * as PlayerActions from '../../../actions/player'
 import * as RouterActions from '../../../actions/router'
+import Button from 'ui/Button';
+import {startCase} from 'lodash'
+import style from '../style.css'
 
 class EditProfile extends Component {
   constructor(props){
@@ -52,13 +55,14 @@ class EditProfile extends Component {
   render() {
     
     return (
-        <div>
+        <div className={style.inputContainer}>
+          <h1> Edit Profile </h1>
           {
             [this.attrs.map((key)=>{
-              return <Input type="text" name={key} value={this.state.player[key]} onChange={this.handle[key]} label={key}/>
+              return <Input type="text" name={key} value={this.state.player[key]} onChange={this.handle[key]} label={startCase(key)}/>
             })]
           }
-        <button onClick={this.editProfile}> save </button>
+        <Button onClick={this.editProfile}> save </Button>
       </div>
     )
   }

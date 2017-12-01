@@ -6,6 +6,7 @@ import * as PlayerActions from '../../../actions/player'
 import * as RouterActions from '../../../actions/router'
 import Input from 'ui/Input'
 import Button from 'ui/Button'
+import style from '../style.css'
 
 
 class Login extends Component {
@@ -34,7 +35,6 @@ class Login extends Component {
         else {
           return res.json()
             .then(function(err) {
-              debugger;
               throw new Error("There's an error upstream and it says " + err.detail);
             });
           }
@@ -56,19 +56,19 @@ class Login extends Component {
 
   render() {
     return (
-      <header>
+      <header className={style.inputContainer}>
         <h1>Login</h1>
         <div>
           <div>
             {/* <label htmlFor="username"> username </label> */}
-            <Input value={this.state.username} label={"username"} onChange={this.setUsername} type="text" id="username"/>
+            <Input value={this.state.username} label={"Username"} onChange={this.setUsername} type="text" id="username"/>
 
             {/* <label htmlFor="password"> password </label> */}
-            <Input value={this.state.hash} label={"password"} onChange={this.setPassword} type="password" id="password"/>
+            <Input value={this.state.hash} label={"Password"} onChange={this.setPassword} type="password" id="password"/>
           </div>
-          <Button onClick={this.handleSave}> login </Button>
+          <Button onClick={this.handleSave}> Login </Button>
         </div>
-        <Button onClick={this.props.goToRegister}> register </Button>
+        <Button onClick={this.props.goToRegister}> Register </Button>
 
 
       </header>

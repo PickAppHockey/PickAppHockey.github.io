@@ -21,14 +21,14 @@ class NavMenu extends React.Component{
             <MenuItem disabled={true} caption={"Skill Level: " + player.skillLevel} />,
             <MenuItem disabled={true} caption={"Gender: " + player.gender} />,
             <MenuDivider />,
-            <MenuItem onClick={this.props.goToEditProfile} caption={"edit profile"} />,
+            <MenuItem onClick={this.props.goToEditProfile} caption={"Edit Profile"} />,
             <MenuDivider />,
-            <MenuItem onClick={this.props.goToPlayTimes} caption={"playtimes"} />,
+            <MenuItem onClick={this.props.goToPlayTimes} caption={"Playtimes"} />,
             <MenuDivider />,
 
         ]
         let otherItems = [
-            <MenuItem onClick={this.logout} caption={"logout"} />,
+            <MenuItem onClick={this.logout} caption={"Logout"} />,
         ]
 
 

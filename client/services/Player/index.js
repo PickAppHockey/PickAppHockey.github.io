@@ -23,7 +23,6 @@ const PlayerServices = {
     },
 
     editPlayerProfile: (playerDto)=> {
-        debugger;
         let cmd = new EditPlayerProfileCommand(playerDto);
         return CommandService.submit(cmd);
 

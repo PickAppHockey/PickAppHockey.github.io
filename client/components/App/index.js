@@ -64,7 +64,7 @@ class App extends Component {
           <Navigation type='horizontal'>
             <a className={style.link} onClick={this.props.goToRinks}>Rinks</a>
             {link}
-            <NavMenu/>
+            {this.props.player && <NavMenu/>}
 
           </Navigation>
         </AppBar>

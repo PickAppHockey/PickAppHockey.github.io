@@ -86,12 +86,12 @@ class PlayTimeInput extends React.Component{
     render(){
         return(
             <div>
-                <DatePicker label='date' sundayFirstDayOfWeek={true} onChange={this.handleDateTimeChange} value={this.state.startDateTime} />
-                <TimePicker label="start time" onChange={this.handleDateTimeChange} value={this.state.startDateTime}/>
-                <Input type="text" name="duration" value={this.state.duration} onChange={this.handleDurationChange} label="duration(minutes)"/>
+                <DatePicker label='Date' sundayFirstDayOfWeek={true} onChange={this.handleDateTimeChange} value={this.state.startDateTime} />
+                <TimePicker label="Start Time" onChange={this.handleDateTimeChange} value={this.state.startDateTime}/>
+                <Input type="text" name="duration" value={this.state.duration} onChange={this.handleDurationChange} label="Duration (minutes)"/>
                 <div>
-                        <Button onClick={this.handleSave}> save </Button>
-                        {!this.props.isNew && <Button onClick={this.handleRemove}> remove </Button>}
+                        <Button onClick={this.handleSave}> Save </Button>
+                        {/* {!this.props.isNew && <Button onClick={this.handleRemove}> Remove </Button>} */}
                 </div>
             </div>
         )

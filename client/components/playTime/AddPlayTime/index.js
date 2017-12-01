@@ -52,7 +52,7 @@ class AddPlayTime extends React.Component{
 
         return(
             <div className={style.addPlayTimeContainer}>
-                <h3> AddPlayTime </h3>
+                <h3> Add Playtime </h3>
                 {playTime && <PlayTimeInput isNew={true} playTime={playTime} onSave={this.addPlayTime}/>}
             </div>
         )
