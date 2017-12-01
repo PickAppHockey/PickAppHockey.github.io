@@ -25,8 +25,9 @@ class Traffic extends React.Component{
 
 
     setTrafficInfo=(date)=>{
-        let startDateTime = date;
-        let endDateTime = new Date();
+        let startDateTime = new Date(date);
+        startDateTime.setHours(0,0,0,0);
+        let endDateTime = new Date(date);
         endDateTime =new Date(endDateTime.setHours(23,59,59,999));
         let rinkId = this.props.rinkId;
         services.GetPlayTimeTrafficByRinkAndTime(rinkId,startDateTime,endDateTime)
