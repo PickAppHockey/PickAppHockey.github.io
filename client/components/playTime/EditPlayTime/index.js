@@ -26,7 +26,7 @@ class EditPlayTime extends React.Component{
                 return res.json()
                 .then(playTime => {
                     this.props.actions.editPlayTime(playTime)
-                    this.props.goToAccount();
+                    this.props.goToRinks();
                 })
             } 
             else {
@@ -59,6 +59,7 @@ function mapStateToProps(state) {
   function mapDispatchToProps(dispatch) {
     return {
       goToAccount:()=>dispatch(RouterActions.goToAccount()),
+      goToRinks:()=>dispatch(RouterActions.goToRinks()),
       
       
       actions: {

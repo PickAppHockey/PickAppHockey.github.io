@@ -41,7 +41,6 @@ ReactDOM.render(
                 <Route path="login" component={Login} />
                 <Route path="register" component={RegisterPlayer}/>
                 <Route path="account" component={Account}>
-                    <IndexRoute component={Profile}/>
                     <Route path="/account/edit-profile" component={EditProfile}/>
                     <Route path="/account/playtimes/:playerId" component={PlayTimes}/>
                 </Route>

@@ -14,7 +14,7 @@ class NavMenu extends React.Component{
 
 
     getMenuItems=()=>{
-        const player = this.props.plaer || {}
+        const player = this.props.player || {}
         let profileItems = [
             <MenuItem disabled={true} caption={"Profile"} />,
             <MenuItem disabled={true} caption={"Position: " + player.position} />,
@@ -54,7 +54,7 @@ class NavMenu extends React.Component{
 
 function mapStateToProps(state) {
     return {
-      rinks: state.player
+      player: state.player
     }
   }
   

@@ -31,7 +31,7 @@ class EditProfile extends Component {
         return res.json()
           .then(player => {
             this.props.actions.editPlayer(player);
-            this.props.goToAccount();
+            this.props.goToRinks();
           })
       } 
       else {
@@ -72,7 +72,9 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    goToAccount:()=>dispatch(RouterActions.goToAccount()),
+    //goToAccount:()=>dispatch(RouterActions.goToAccount()),
+    goToRinks:()=>dispatch(RouterActions.goToRinks()),
+    
     
     
     actions: {

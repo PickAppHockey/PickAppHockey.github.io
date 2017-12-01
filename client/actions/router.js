@@ -19,7 +19,7 @@ export const goToAccount = ()=>{
 }
 
 export const goToEditProfile = ()=>{
-  return push("/account/edit-profile/");
+  return push("/account/edit-profile");
 }
 
 

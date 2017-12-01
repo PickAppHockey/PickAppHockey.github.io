@@ -136,7 +136,7 @@ function mapStateToProps(state) {
   
   function mapDispatchToProps(dispatch) {
     return {
-      goToAccount:()=>dispatch(RouterActions.goToAccount()),
+      //goToAccount:()=>dispatch(RouterActions.goToAccount()),
       
       
       actions: {

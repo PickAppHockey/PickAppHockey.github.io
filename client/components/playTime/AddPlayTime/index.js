@@ -22,7 +22,7 @@ class AddPlayTime extends React.Component{
                 return res.json()
                 .then(playTime => {
                     this.props.actions.addPlayTime(playTime);
-                    this.props.goToAccount();
+                    this.props.goToPlayTimes(this.props.player.id);
                 })
             } 
             else {
@@ -67,7 +67,9 @@ function mapStateToProps(state) {
   
   function mapDispatchToProps(dispatch) {
     return {
-      goToAccount:()=>dispatch(RouterActions.goToAccount()),
+      //goToAccount:()=>dispatch(RouterActions.goToAccount()),
+      goToPlayTimes:(id)=>dispatch(RouterActions.goToPlayTimes(id)),
+      
       
       
       actions: {

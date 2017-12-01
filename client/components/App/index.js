@@ -55,7 +55,7 @@ class App extends Component {
 
     let link = <a className={style.link} onClick={this.props.goToLogin}>Login</a>;
     if(player){
-       link = <a className={style.link} onClick={this.props.goToAccount}>{player.username}</a>
+       link = <a> {player.username}</a>
     }
     
     return (

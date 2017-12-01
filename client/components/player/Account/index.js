@@ -36,11 +36,11 @@ class Account extends Component {
     let playTimeLink = <a key="3" className={style.link} onClick={()=>this.clickHandler("playTimes", ()=>props.goToPlayTimes(player.id))}> play-times</a>
     
     let links = [];
-    if(this.state.showBackBtn){links.push(profileLink)}
-    else{
-      links.push(editLink);
-      links.push(playTimeLink);
-    }
+    // if(this.state.showBackBtn){links.push(profileLink)}
+    // else{
+    //   links.push(editLink);
+    //   links.push(playTimeLink);
+    // }
 
     
     return (

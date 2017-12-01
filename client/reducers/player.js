@@ -4,11 +4,8 @@
 
 
 
-const initialState =
-{
-  id: 'b779e7e0-d54c-11e7-9cc8-1f638c2e3d35',
-  username: "bob"
-}
+const initialState = null;
+
 
 export default (state = initialState, action)=>{
   switch(action.type){
