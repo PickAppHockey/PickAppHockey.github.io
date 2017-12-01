@@ -1,5 +1,6 @@
 const fetch = require('isomorphic-fetch')
-const PATH = "http://localhost:8080/Commands";
+const PATH = "https://pickapp-server.herokuapp.com/Commands";
+
 
 function CommandService(){
     
